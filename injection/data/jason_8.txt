@@ -1,0 +1,42 @@
+creating jason_8.dat 
+Clean mode: You need to perform gesture zoom out for 10 times! 
+The sequence is 8888888888
+Expected count 35000, expected interval 1000, expected time 70000000us
+Socket set up. Ready to receive packet! 
+Begin recording packet!!! 
+..... ..... ..... ..... ..... 
+The 0th gesture: zoom out 
+Current time in us is 155132381 
+..... ..... ..... ..... ..... 
+The 1th gesture: zoom out 
+Current time in us is 158132463 
+..... ..... ..... ..... ..... 
+The 2th gesture: zoom out 
+Current time in us is 161132529 
+..... ..... ..... ..... ..... 
+The 3th gesture: zoom out 
+Current time in us is 164132557 
+..... ..... ..... ..... ..... 
+The 4th gesture: zoom out 
+Current time in us is 167132635 
+..... ..... ..... ..... ..... 
+The 5th gesture: zoom out 
+Current time in us is 170132730 
+..... ..... ..... ..... ..... 
+The 6th gesture: zoom out 
+Current time in us is 173132770 
+..... ..... ..... ..... ..... 
+The 7th gesture: zoom out 
+Current time in us is 176132837 
+..... ..... ..... ..... ..... 
+The 8th gesture: zoom out 
+Current time in us is 179132934 
+..... ..... ..... ..... ..... 
+The 9th gesture: zoom out 
+Current time in us is 182132995 
+..... ..... ..... ..... ..... 
+The 10th gesture: swipe left 
+Current time in us is 185133049 
+..... ..... ..... ..... timeout in 5.000001 second
+
+count 34979, expected_count 35000, expected_time 35000000, used_time 35006735, jason_8.dat filesize 7520256 

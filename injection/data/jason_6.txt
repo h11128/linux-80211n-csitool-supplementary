@@ -1,0 +1,50 @@
+do ../netlink/log_to_data jason_6.dat jason 6 0
+creating jason_6.dat 
+Clean mode: You need to perform gesture double tap for 10 times! 
+The sequence is 6666666666
+Expected count 35000, expected interval 1000, expected time 70000000us
+Socket set up. Ready to receive packet! 
+Begin recording packet!!! 
+..... ..... ..... ..... ..... 
+The 0th gesture: double tap 
+Current time in us is 2111407620 
+..... ..... ..... ..... ..... 
+The 1th gesture: double tap 
+Current time in us is 2114407649 
+..... ..... ..... ..... ..... 
+The 2th gesture: double tap 
+Current time in us is 2117407707 
+..... ..... ..... ..... ..... 
+The 3th gesture: double tap 
+Current time in us is 2120407856 
+..... ..... ..... ..... ..... 
+The 4th gesture: double tap 
+Current time in us is 2123407941 
+..... ..... ..... ..... ..... 
+The 5th gesture: double tap 
+Current time in us is 2126407949 
+..... ..... ..... ..... ..... 
+The 6th gesture: double tap 
+Current time in us is 2129408042 
+..... ..... ..... ..... ..... 
+The 7th gesture: double tap 
+Current time in us is 2132408126 
+..... ..... ..... ..... ..... 
+The 8th gesture: double tap 
+Current time in us is 2135408207 
+..... ..... ..... ..... ..... 
+The 9th gesture: double tap 
+Current time in us is 2138408236 
+..... ..... ..... ..... ..... 
+The 10th gesture: swipe left 
+Current time in us is 2141408379 
+..... ..... ..... ..... 
+Broadcast message from root@bo-113c
+	(unknown) at 12:42 ...
+
+The system is going down for halt in 2 minutes!
+MCSS failure timeout shutdown. 
+timeout in 5.000001 second
+
+count 34982, expected_count 35000, expected_time 35000000, used_time 35007579, jason_6.dat filesize 7520256 
+

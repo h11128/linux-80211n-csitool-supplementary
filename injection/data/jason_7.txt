@@ -1,0 +1,49 @@
+reating jason_7.dat 
+Clean mode: You need to perform gesture zoom in for 10 times! 
+The sequence is 7777777777
+Expected count 35000, expected interval 1000, expected time 70000000us
+Socket set up. Ready to receive packet! 
+Begin recording packet!!! 
+..... ..... ..... ..... ..... 
+The 0th gesture: zoom in 
+Current time in us is -2097457367 
+..... ..... ..... ..... ..... 
+The 1th gesture: zoom in 
+Current time in us is -2094457302 
+..... ..... ..... ..... ..... 
+The 2th gesture: zoom in 
+Current time in us is -2091457191 
+..... ..... ..... ..... ..... 
+The 3th gesture: zoom in 
+Current time in us is -2088457125 
+
+Broadcast message from root@bo-113c
+	(unknown) at 12:43 ...
+
+The system is going down for halt in 1 minute!
+MCSS failure timeout shutdown. 
+..... ..... ..... ..... ..... 
+The 4th gesture: zoom in 
+Current time in us is -2085457016 
+..... ..... ..... ..... ..... 
+The 5th gesture: zoom in 
+Current time in us is -2082456907 
+..... ..... ..... ..... ..... 
+The 6th gesture: zoom in 
+Current time in us is -2079456858 
+..... ..... ..... ..... ..... 
+The 7th gesture: zoom in 
+Current time in us is -2076456784 
+..... ..... ..... ..... ..... 
+The 8th gesture: zoom in 
+Current time in us is -2073456650 
+..... ..... ..... ..... ..... 
+The 9th gesture: zoom in 
+Current time in us is -2070456574 
+..... ..... ..... ..... ..... 
+The 10th gesture: swipe left 
+Current time in us is -2067456503 
+..... ..... ..... ..... timeout in 5.000001 second
+
+count 34979, expected_count 35000, expected_time 35000000, used_time 35005203, jason_7.dat filesize 7520256 
+

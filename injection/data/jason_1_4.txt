@@ -1,0 +1,103 @@
+creating jason_1_4.dat 
+Random mode: You need to perform 30 different gesture.
+The sequence is 207366346686026800534666837588
+Expected count 95000, expected interval 1000, expected time 190000000us
+Socket set up. Ready to receive packet! 
+Begin recording packet!!! 
+..... ..... ..... ..... ..... 
+The 0th gesture: swipe down 
+Current time in us is 853583597 
+..... ..... ..... ..... ..... 
+The 1th gesture: swipe left 
+Current time in us is 856583647 
+..... ..... ..... ..... ..... 
+The 2th gesture: zoom in 
+Current time in us is 859583723 
+..... ..... ..... ..... ..... 
+The 3th gesture: swipe up 
+Current time in us is 862583750 
+..... ..... ..... ..... ..... 
+The 4th gesture: double tap 
+Current time in us is 865583891 
+..... ..... ..... ..... ..... 
+The 5th gesture: double tap 
+Current time in us is 868583950 
+..... ..... ..... ..... ..... 
+The 6th gesture: swipe up 
+Current time in us is 871583986 
+..... ..... ..... ..... ..... 
+The 7th gesture: circle left 
+Current time in us is 874584091 
+..... ..... ..... ..... ..... 
+The 8th gesture: double tap 
+Current time in us is 877584123 
+..... ..... ..... ..... ..... 
+The 9th gesture: double tap 
+Current time in us is 880584171 
+..... ..... ..... ..... ..... 
+The 10th gesture: zoom out 
+Current time in us is 883584236 
+..... ..... ..... ..... ..... 
+The 11th gesture: double tap 
+Current time in us is 886584263 
+..... ..... ..... ..... ..... 
+The 12th gesture: swipe left 
+Current time in us is 889584335 
+..... ..... ..... ..... ..... 
+The 13th gesture: swipe down 
+Current time in us is 892584439 
+..... ..... ..... ..... ..... 
+The 14th gesture: double tap 
+Current time in us is 895584480 
+..... ..... ..... ..... ..... 
+The 15th gesture: zoom out 
+Current time in us is 898583609 
+..... ..... ..... ..... ..... 
+The 16th gesture: swipe left 
+Current time in us is 901583679 
+..... ..... ..... ..... ..... 
+The 17th gesture: swipe left 
+Current time in us is 904583744 
+..... ..... ..... ..... ..... 
+The 18th gesture: circle right 
+Current time in us is 907583808 
+..... ..... ..... ..... ..... 
+The 19th gesture: swipe up 
+Current time in us is 910583840 
+..... ..... ..... ..... ..... 
+The 20th gesture: circle left 
+Current time in us is 913583907 
+..... ..... ..... ..... ..... 
+The 21th gesture: double tap 
+Current time in us is 916583975 
+..... ..... ..... ..... ..... 
+The 22th gesture: double tap 
+Current time in us is 919584101 
+..... ..... ..... ..... ..... 
+The 23th gesture: double tap 
+Current time in us is 922584085 
+..... ..... ..... ..... ..... 
+The 24th gesture: zoom out 
+Current time in us is 925584146 
+..... ..... ..... ..... ..... 
+The 25th gesture: swipe up 
+Current time in us is 928584244 
+..... ..... ..... ..... ..... 
+The 26th gesture: zoom in 
+Current time in us is 931584266 
+..... ..... ..... ..... ..... 
+The 27th gesture: circle right 
+Current time in us is 934584352 
+..... ..... ..... ..... ..... 
+The 28th gesture: zoom out 
+Current time in us is 937584408 
+..... ..... ..... ..... ..... 
+The 29th gesture: zoom out 
+Current time in us is 940584461 
+..... ..... ..... ..... ..... 
+The 30th gesture: swipe left 
+Current time in us is 943583565 
+..... ..... ..... ..... timeout in 5.000001 second
+
+count 94951, expected_count 95000, expected_time 95000000, used_time 95007526, jason_1_4.dat filesize 20414464 
+

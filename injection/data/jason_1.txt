@@ -1,0 +1,42 @@
+Clean mode: You need to perform gesture swipe right for 10 times! 
+The sequence is 1111111111
+Expected count 35000, expected interval 1000, expected time 70000000us
+Socket set up. Ready to receive packet! 
+Begin recording packet!!! 
+..... ..... ..... ..... ..... 
+The 0th gesture: swipe right 
+Current time in us is 1423947831 
+..... ..... ..... ..... ..... 
+The 1th gesture: swipe right 
+Current time in us is 1426947886 
+..... ..... ..... ..... ..... 
+The 2th gesture: swipe right 
+Current time in us is 1429947995 
+..... ..... ..... ..... ..... 
+The 3th gesture: swipe right 
+Current time in us is 1432948116 
+..... ..... ..... ..... ..... 
+The 4th gesture: swipe right 
+Current time in us is 1435948108 
+..... ..... ..... ..... ..... 
+The 5th gesture: swipe right 
+Current time in us is 1438948216 
+..... ..... ..... ..... ..... 
+The 6th gesture: swipe right 
+Current time in us is 1441948299 
+..... ..... ..... ..... ..... 
+The 7th gesture: swipe right 
+Current time in us is 1444948402 
+..... ..... ..... ..... ..... 
+The 8th gesture: swipe right 
+Current time in us is 1447948478 
+..... ..... ..... ..... ..... 
+The 9th gesture: swipe right 
+Current time in us is 1450948582 
+..... ..... ..... ..... ..... 
+The 10th gesture: swipe left 
+Current time in us is 1453948635 
+timeout in 5.000001 second
+
+count 34981, expected_count 35000, expected_time 35000000, used_time 35007396, jason_1.dat filesize 7520256 
+

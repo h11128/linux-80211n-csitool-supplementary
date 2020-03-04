@@ -1,0 +1,49 @@
+creating jason_5.dat 
+Clean mode: You need to perform gesture circle right for 10 times! 
+The sequence is 5555555555
+Expected count 35000, expected interval 1000, expected time 70000000us
+Socket set up. Ready to receive packet! 
+Begin recording packet!!! 
+..... ..... ..... ..... ..... 
+The 0th gesture: circle right 
+Current time in us is 2052705847 
+..... ..... ..... ..... ..... 
+The 1th gesture: circle right 
+Current time in us is 2055705924 
+..... ..... ..... ..... ..... 
+The 2th gesture: circle right 
+Current time in us is 2058706041 
+..... ..... ..... ..... ..... 
+The 3th gesture: circle right 
+Current time in us is 2061706119 
+..... ..... ..... ..... ..... 
+The 4th gesture: circle right 
+Current time in us is 2064706169 
+..... ..... ..... ..... ..... 
+The 5th gesture: circle right 
+Current time in us is 2067706294 
+..... ..... ..... ..... ..... 
+The 6th gesture: circle right 
+Current time in us is 2070706419 
+..... ..... ..... ..... ..... 
+The 7th gesture: circle right 
+Current time in us is 2073706441 
+..... ..... ..... ..... ..... 
+The 8th gesture: circle right 
+Current time in us is 2076706525 
+..... ..... ..... ..... ..... 
+The 9th gesture: circle right 
+Current time in us is 2079706635 
+..... ..... ..... ..... ..... 
+The 10th gesture: swipe left 
+Current time in us is 2082706720 
+..... ..... 
+Broadcast message from root@bo-113c
+	(unknown) at 12:41 ...
+
+The system is going down for halt in 3 minutes!
+MCSS failure timeout shutdown. 
+timeout in 5.000001 second
+
+count 34983, expected_count 35000, expected_time 35000000, used_time 35005299, jason_5.dat filesize 7520256 
+

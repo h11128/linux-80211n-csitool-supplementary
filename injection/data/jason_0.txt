@@ -1,0 +1,42 @@
+creating jason_0.dat 
+Clean mode: You need to perform gesture swipe left for 10 times! 
+The sequnce number is 00000000000
+Expected count 35000, expected interval 1000, expected time 70000000us
+Socket set up. Ready to receive packet! 
+Begin recording packet!!! 
+..... ..... ..... ..... ..... 
+The 0th gesture: swipe left 
+Current time in us is 1050733192 
+..... ..... ..... ..... ..... 
+The 1th gesture: swipe left 
+Current time in us is 1053733207 
+..... ..... ..... ..... ..... 
+The 2th gesture: swipe left 
+Current time in us is 1056733325 
+..... ..... ..... ..... ..... 
+The 3th gesture: swipe left 
+Current time in us is 1059733435 
+..... ..... ..... ..... ..... 
+The 4th gesture: swipe left 
+Current time in us is 1062733502 
+..... ..... ..... ..... ..... 
+The 5th gesture: swipe left 
+Current time in us is 1065733554 
+..... ..... ..... ..... ..... 
+The 6th gesture: swipe left 
+Current time in us is 1068733674 
+..... ..... ..... ..... ..... 
+The 7th gesture: swipe left 
+Current time in us is 1071733735 
+..... ..... ..... ..... ..... 
+The 8th gesture: swipe left 
+Current time in us is 1074733819 
+..... ..... ..... ..... ..... 
+The 9th gesture: swipe left 
+Current time in us is 1077733914 
+..... ..... ..... ..... ..... 
+The 10th gesture: swipe left 
+Current time in us is 1080734018 
+..... ..... ..... ..... timeout in 5.000001 second
+
+count 34981, expected_count 35000, expected_time 35000000, used_time 35005965, jason_0.dat filesize 7520256 

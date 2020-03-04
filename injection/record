@@ -1,0 +1,5 @@
+dmesg | grep loaded
+
+1. when I can receive packets and write log_to_file infinitely 
+[ 5026.262164] iwlwifi 0000:02:00.0: loaded firmware version 8.24.2.12 op_mode iwldvm
+

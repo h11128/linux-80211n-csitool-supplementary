@@ -1,0 +1,21 @@
+1. show link state, print txbirate
+	iw dev wlan0 link
+(
+
+
+
+2. CSI measurement condition:
+
+The packet is transmitted using an 802.11n "HT" rate.
+
+The receiver's logical configuration (e.g., channel type is HT, and channel width) and its physical configuration (e.g., correct number of antennas connected, all antennas work in the configured band, all antennas are enabled in the firmware) support the transmitted rate.
+
+The receiver decodes the packet correctly, with no errors.
+
+monitor mode:The packet is addressed both to and from a hardcoded, fixed address 00:16:ea:12:34:56. See the injection scripts, using mode 1 only
+
+3. rate selection interpretation
+ 	convert hexadecimal into binary, and check the faq1
+	guard interval: https://en.wikipedia.org/wiki/Guard_interval
+	https://github.com/dhalperi/linux-80211n-csitool/blob/csitool-3.13/drivers/net/wireless/iwlwifi/dvm/commands.h#L245-L334
+	0x1c115 or 0x1c113 

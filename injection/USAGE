@@ -1,0 +1,58 @@
+new
+receiver
+./setup_monitor_csi.sh 64 HT20
+sudo ../netlink/log_to_file log.dat
+
+transmitter 
+./setup_inject.sh 64 HT20
+sudo echo 0x4101 |sudo tee /sys/kernel/debug/ieee80211/phy0/iwlwifi/iwldvm/debug/monitor_tx_rate
+sudo ./random_packets 1 100 1 
+
+realtime
+receiver
+./setup_monitor_csi_2.sh 64 HT20
+matlab run read_bf_socket.m (python sudo env "PATH=$PATH" python read_bf_file.py)
+sudo ./log_to_server 127.0.0.1 8090
+
+transmitter
+./setup_inject.sh 64 HT20
+sudo echo 0x4101 |sudo tee 'find /sys -name monitor_tx_rate'
+sudo ./random_packets 100000000 1 1 10000
+
+
+old
+receiver
+sudo chmod 777 setup_monitor_csi_1.sh
+./setup_monitor_csi_1.sh wlan1 64 HT20
+sudo ../netlink/log_to_file log.dat 
+
+transmitter
+sudo chmod 777 setup_inject_1.sh
+ ./setup_inject_1.sh wlan1 64 HT20
+sudo echo 0x1c113 | sudo tee /sys/kernel/debug/ieee80211/phy0/iwlwifi/iwldvm/debug/monitor_tx_rate
+sudo ./random_packets 100000 100 1
+
+restore	
+resotre firmware amd driver and do modprobe
+
+sudo rm /lib/firmware/iwlwifi-5000-2.ucode
+for file in /lib/firmware/iwlwifi-5000-*.ucode.orig; do sudo mv ${file} ${file%.orig}; done
+sudo rm -f /lib/modules/$(uname -r)/updates/iwlwifi.ko
+sudo rm -f /lib/modules/$(uname -r)/updates/iwldvm.ko
+sudo rm -f /lib/modules/$(uname -r)/updates/iwlmvm.ko
+sudo depmod
+sudo modprobe iwlwifi
+sudo start network-manager
+
+sudo make -C /lib/modules/$(uname -r)/build M=$(pwd)/drivers/net/wireless/iwlwifi modules
+
+sudo make -C /lib/modules/$(uname -r)/build M=$(pwd)/drivers/net/wireless/iwlwifi INSTALL_MOD_DIR=updates modules_install
+sudo depmod 
+cd ..
+for file in /lib/firmware/iwlwifi-5000-*.ucode; do sudo mv $file $file.orig; done
+sudo ln -s iwlwifi-5000-2.ucode.sigcomm2010 /lib/firmware/iwlwifi-5000-2.ucode
+
+
+
+
+

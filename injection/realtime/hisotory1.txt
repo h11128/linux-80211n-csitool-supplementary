@@ -1,0 +1,1000 @@
+ 1030  iwconfig
+ 1031  ifconfig wlan1 down
+ 1032  sudo modprobe iwlwifi connector_log=0x1
+ 1033  dmesg | grep iwl
+ 1034  dmesg | grep iw
+ 1035  sudo modprobe iwldvm
+ 1036  sudo iw dev wlan1 scan
+ 1037  sudo modprobe iwldvm
+ 1038  sudo rm /etc/modprobe.d/csitool.conf
+ 1039  sudo depmod
+ 1040  iwconfig
+ 1041  ifconfig
+ 1042  sudo modprobe iwlwifi
+ 1043  dmesg | grep wifi
+ 1044  sudo rmmod iwlwifi && sudo modprobe iwlwifi
+ 1045  dmesg | grep wifi
+ 1046  sudo rmmod iwlwifi && sudo modprobe iwlwifi
+ 1047  dmesg | grep wifi
+ 1048  modprobe -v iwldvm
+ 1049  sudo modprobe -v iwldvm
+ 1050  sudo modinfo iwldvm
+ 1051  uname -r
+ 1052  sudo rm -f /lib/modules/$(uname -r)/updates/iwldvm.ko
+ 1053  sudo rm -f /lib/modules/$(uname -r)/updates/iwlmvm.ko
+ 1054  sudo depmod
+ 1055  dmesg | grep wifi
+ 1056  sudo modprobe -r iwlwifi mac80211
+ 1057  sudo modprobe iwlwifi mac80211
+ 1058  dmesg | grep wifi
+ 1059  sudo modprobe iwlwifi
+ 1060  modinfo iwldvm
+ 1061  modinfo mac80211
+ 1062  iw
+ 1063  iw list
+ 1064  iw --debug
+ 1065  sudo stop network-manager
+ 1066  sudo modprobe iwlwifi
+ 1067  sudo depmod
+ 1068  dmesg | grep wifi
+ 1069  iwconfig
+ 1070  ifconfig
+ 1071  sudo rm /lib/firmware/iwlwifi-5000-2.ucode
+ 1072  for file in /lib/firmware/iwlwifi-5000-*.ucode.orig; do sudo mv ${file} ${file%.orig}; done
+ 1073  sudo rm -f /lib/modules/$(uname -r)/updates/iwlwifi.ko
+ 1074  sudo rm -f /lib/modules/$(uname -r)/updates/iwldvm.ko
+ 1075  sudo rm -f /lib/modules/$(uname -r)/updates/iwlmvm.ko
+ 1076  sudo depmod
+ 1077  cd lib
+ 1078  cd /lib
+ 1079  cd firmware
+ 1080  ls
+ 1081  sudo modprobe -r iwlwifi
+ 1082  sudo modprobe iwlwifi
+ 1083  sudo restart network-manager
+ 1084  dmesg | grep wifi
+ 1085  dmesg | grep -i 'waln|iwl|80211'
+ 1086  dmesg | grep -i 'waln\|iwl\|80211'
+ 1087  dmesg | grep -i aspm
+ 1088  lspci | grep intel
+ 1089  lspci
+ 1090  ip addr
+ 1091  ifconfig -a
+ 1092  MODULES="iwldvm"
+ 1093  mkinitcpio -p linux
+ 1094  dmesg | grep -i 'waln\|iwl\|80211'
+ 1095  dmesg | grep -i 'waln\|iwl\|80211\|mac'
+ 1096  sudo modprobe -r iwlwifi
+ 1097  sudo modprobe iwlwifi cfg80211
+ 1098  dmesg | grep -i 'waln\|iwl\|80211\|mac'
+ 1099  make defconfig-wifi
+ 1100  make menuconfig
+ 1101  make defconfig-iwlwifi
+ 1102  lsmod
+ 1103  sudo restart network-manager
+ 1104  lspci
+ 1105  dmesg | grep -i 'waln\|iwl\|80211\|mac'
+ 1106  sudo modprobe iwlwifi connector_log=0x1
+ 1107  dmesg | grep -i 'waln\|iwl\|80211\|mac'
+ 1108  dmesg | grep -i wlan
+ 1109  dmesg | grep -i iwl
+ 1110  sudo modprobe -r iwlwifi mac80211
+ 1111  sudo modprobe iwlwifi mac80211
+ 1112  sudo modprobe -r iwldvm
+ 1113  dmesg | grep -i iwl
+ 1114  dmesg | grep -i iwlwifi
+ 1115  sudomodprobe
+ 1116  sudo modprobe iwlwifi mac80211 cfg80211
+ 1117  sudo restart network-manager
+ 1118  sudo modprobe iwldvm
+ 1119  cd ~/Desktop
+ 1120  ls
+ 1121  iwlist channle
+ 1122  iwlist channel
+ 1123  find /sys -name iwldvm
+ 1124  cd /sys
+ 1125  cd kernel
+ 1126  sudo chmod 777 debug
+ 1127  cd debug
+ 1128  ls
+ 1129  cd iwlwifi
+ 1130  ls
+ 1131  cd ..
+ 1132  sudo chmod 777 iwlwifi
+ 1133  ls
+ 1134  cd iwlwifi
+ 1135  ls
+ 1136  sudo chmod 777 'ls'
+ 1137  sudo chmod 777 0000:02:00.0
+ 1138  ls
+ 1139  cd 0000\:02\:00.0/
+ 1140  ls
+ 1141  sudo chmod 777 trans
+ 1142  ls
+ 1143  cd trans
+ 1144  ls
+ 1145  dmesg | grep iwlwifi
+ 1146  sudo modprobe iwlwifi
+ 1147  sudo depmod
+ 1148  cd /lib
+ 1149  ls
+ 1150  cd modules
+ 1151  ls
+ 1152  cd ${uname -r}
+ 1153  cd $(uname -r)
+ 1154  ls
+ 1155  dmesg | grep iwlwifi
+ 1156  [6~~~~~~~~~~~~~~~~~~~~~~~~~~9~~~~~
+ 1157  grep iwl /etc/modprobe.d/*
+ 1158  lspc -nnk
+ 1159  lspci -nnk
+ 1160  lsmod
+ 1161  rfkill list all
+ 1162  rfkill unblock all
+ 1163  dmesg | grep iwlwifi
+ 1164  sudo rmmode iwlwifi && sudo modprobe iwlwifi
+ 1165  sudo rmmod iwlwifi && sudo modprobe iwlwifi
+ 1166  dmesg | grep iwlwifi
+ 1167  ls
+ 1168  cd Downloads
+ 1169  ls
+ 1170  cd linux
+ 1171  cd linux-80211n-csitool
+ 1172  dmsemg | grep iwl
+ 1173  dmesmg | grep iwl
+ 1174  dmesg | grep iwl
+ 1175  sudo make -C /lib/modules/$(uname -r)/build M=$(pwd)/drivers/net/wireless/iwlwifi INSTALL_MOD_DIR=updates\modules_install
+ 1176  sudo depmod
+ 1177  cd ..
+ 1178  for file in /lib/firmware/iwlwifi-5000-*.ucode; do sudo mv $file $file.orig; done
+ 1179  sudo ln -s iwlwifi-5000-2.ucode.sigcomm2010 /lib/firmware/iwlwifi-5000-2.ucode
+ 1180  dmesg | grep iwl
+ 1181  cd linux-80211n-csitool-supplementary/
+ 1182  cd injection/
+ 1183  ls
+ 1184  ./setup_monitor_csi_2.sh 64 HT20
+ 1185  iwconfig
+ 1186  ifconfig
+ 1187  sudo modprobe -r iwlwifi mac80211 cfg80211
+ 1188  sudo modprobe iwlwifi connector_log=0x1
+ 1189  ifconfig
+ 1190  iwconfig
+ 1191  lspci | grep wifi
+ 1192  lspci | grep wire
+ 1193  lspci | grep wi
+ 1194  lspci 
+ 1195  lspci | grep 5300
+ 1196  dmesg | grep iwl
+ 1197  rfkill unblock a;;
+ 1198  rfkill unblock all
+ 1199  restart network-manager
+ 1200  start network-manager
+ 1201  sudo start network-manager
+ 1202  modinfo iwldvm
+ 1203  sudo gedit /etc/modprobe.d/iwlwifi.conf
+ 1204  lsmod | grep iwl
+ 1205  sudo modprobe iwldvm
+ 1206  iwconfig
+ 1207  lsmod
+ 1208  dmesg | grep wifi
+ 1209  dmesg | grep iwl
+ 1210  usod modprobe -v
+ 1211  sudo modprobe -v
+ 1212  sudo modprobe -v iwldvm
+ 1213  cat /etc/modprobe.d/iwlwifi.conf
+ 1214  sudo rm /etc/modprobe.d/iwlwifi.conf
+ 1215  sudo stop network-manager
+ 1216  sudo modprobe -rfv iwlwifi iwldvm iwlmvm
+ 1217  sudo modprobe -v iwldvm
+ 1218  grep -i iwl /etc/modprobe.d/*
+ 1219  lsmod
+ 1220  dkpg -l linux-image* | grep ii
+ 1221  dpkg -l linux-image* | grep ii
+ 1222  nm-tool
+ 1223  ifconfig
+ 1224  iwconfig
+ 1225  grep -i iwl /lib/firmware/
+ 1226  grep -s "iwl" /lib/firmware/
+ 1227  grep -s "iwl" /lib/firmware/{*,.*}
+ 1228  grep -s iwl /lib/firmware/{*,.*}
+ 1229  ls /lib/firmware/
+ 1230  ls /lib/firmware/ | grep iwl
+ 1231  grep -i iwl /etc/modprobe.d/*
+ 1232  grep -i iwl /etc/modprobe.d/
+ 1233  ls /etc/modprobe.d/ | grep iwl
+ 1234  ls /etc/modprobe.d/ | grep i
+ 1235  ls /etc/modprobe.d/ | grep iw
+ 1236  dmesg | grep wifi
+ 1237  ifconfig
+ 1238  iwconfig
+ 1239  lsmod
+ 1240  lsmod | grep li
+ 1241  lsmod | grep iwl
+ 1242  lsmod | grep 'iwl\|mac|'
+ 1243  lsmod | grep mac
+ 1244  sudo iw
+ 1245  iw phy
+ 1246  iw phy list
+ 1247  dmesg | grep iwl
+ 1248  cd /usr/src/linux
+ 1249  cd /usr
+ 1250  cd src
+ 1251  cd linux
+ 1252  ls
+ 1253  cd linux-headers-$(uname -a)
+ 1254  cd linux-headers-$(uname -r)
+ 1255  ls
+ 1256  make defconfig-wifi
+ 1257  sudo make defconfig-wifi
+ 1258  make menuconfig
+ 1259  sudo make menuconfig
+ 1260  sudo apt-get ncurses
+ 1261  sudo apt-install ncurses
+ 1262  sudo apt install ncurses
+ 1263  ls
+ 1264  cat init
+ 1265  grep iwl
+ 1266  dmesg | grep iwl
+ 1267  dmesg | grep iwldvm
+ 1268  lsmod
+ 1269  lsmod | grep iwl
+ 1270  ls /lib/firmware/ | grep iwl
+ 1271  dmesg | grep loaded
+ 1272  dmesg | grep load
+ 1273  dmesg | grep firm
+ 1274  sudo apt-get cnurse
+ 1275  uname -r
+ 1276  uname -a
+ 1277  lscpu
+ 1278  cd Downloads
+ 1279  ls
+ 1280  Miniconda3-latest-Linux-x86_64.sh
+ 1281  ./Miniconda3-latest-Linux-x86_64.sh
+ 1282  sudo ./Miniconda3-latest-Linux-x86_64.sh
+ 1283  chmod 777 Miniconda3-latest-Linux-x86_64.sh
+ 1284  ./Miniconda3-latest-Linux-x86_64.sh
+ 1285  git
+ 1286  git clone https://github.com/lubingxian/Realtime-processing-for-csitool.git
+ 1287  git clone https://github.com/DuRaRaRall/The-Real-time-Visualization-System-Based-on-CSI.git
+ 1288  conda
+ 1289  conda install numpy
+ 1290  dmesg | grep wifi
+ 1291  dmesg | grep iwldvm
+ 1292  dmesg | grep iwl
+ 1293  ls /lib/firmware/ | grep wifi
+ 1294  ls /lib/firmware/ | grep iwl
+ 1295  ls /lib/modules/$(uname -r)/build | grep iwl
+ 1296  ls /lib/modules/$(uname -r)/build | grep wifi
+ 1297  ls /lib/modules/$(uname -r)/build | grep w
+ 1298  ls /lib/modules/$(uname -r)/build/firmware/ | grep w
+ 1299  ls /lib/modules/$(uname -r)/build/firmware/ | grep 
+ 1300  ls /lib/modules/$(uname -r)/build/firmware/ | grep 1
+ 1301  ls /lib/modules/$(uname -r)/build/firmware/ | grep a
+ 1302  ls /lib/modules/$(uname -r)/build/firmware/
+ 1303  ls /lib/modules/$(uname -r)/build/
+ 1304  ls /lib/modules/$(uname -r)/updates/
+ 1305  conda
+ 1306  conda install numpy
+ 1307  conda install socket
+ 1308  pip install socket
+ 1309  pip install pyqtgraph
+ 1310  dmesg | grep iwl
+ 1311  ls /etc/ | greo conf
+ 1312  ls
+ 1313  ls /etc/ | grep conf
+ 1314  cd /lib
+ 1315  cd module
+ 1316  cd /module
+ 1317  cd /modules
+ 1318  ls
+ 1319  cd modules
+ 1320  cd $(uname -r)
+ 1321  cd updates
+ 1322  chmod 777 /dvm/iwldvm.ko
+ 1323  chmod 777 dvm/iwldvm.ko
+ 1324  sudo chmod 777 dvm/iwldvm.ko
+ 1325  cp dvm/iwldvm.ko iwldvm.ko
+ 1326  sudo cp dvm/iwldvm.ko iwldvm.ko
+ 1327  sudo cp dvm/iwldvm.ko ./iwldvm.ko
+ 1328  cd /temp
+ 1329  cd /usr
+ 1330  ls
+ 1331  cd src
+ 1332  cd linux
+ 1333  ls
+ 1334  cd linux-headers-3.13.0-180-generic
+ 1335  cd linux-headers-3.13.0-170-generic
+ 1336  uname -r
+ 1337  ls
+ 1338  cat Kconfig
+ 1339  make memuconfig
+ 1340  make && make modules_install
+ 1341  make install
+ 1342  make
+ 1343  cd /boot
+ 1344  ls
+ 1345  cd abi-$(uname -r)
+ 1346  cd config-$(uname -r)
+ 1347  grep -i iwl config-$(uname -r)
+ 1348  grep -i wifi config-$(uname -r)
+ 1349  grep -i iwl config-$(uname -r)
+ 1350  grep -i 80211 config-$(uname -r)
+ 1351  ifconfig
+ 1352  iwconfig
+ 1353  modprobe
+ 1354  modprobe -h
+ 1355  modprobe iwlwifi -c
+ 1356  modprobe iwlwifi -c | grep iwl
+ 1357  modprobe iwldvm -c | grep iwl
+ 1358  modprobe -h
+ 1359  modprobe iwldvm -a
+ 1360  sudo modprobe iwldvm -a
+ 1361  sudo modprobe -a iwldvm
+ 1362  sudo modprobe -v iwldvm
+ 1363  sudo modprobe -n iwldvm
+ 1364  cd /boot
+ 1365  ls
+ 1366  grep -i wifi config-3.13.0-85-generic 
+ 1367  grep -i iwl config-3.13.0-85-generic 
+ 1368  grep -i 80211 config-3.13.0-85-generic 
+ 1369  dmesg | grep iwl
+ 1370  ls
+ 1371  cat initrd.img-3.13.0-170-generic | grep iwl
+ 1372  cat config-3.13.0-170-generic | grep iwl
+ 1373  cat config-3.13.0-170-generic | grep iw
+ 1374  cat config-3.13.0-170-generic
+ 1375  sudo -r iwldvm
+ 1376  sudo modprobe -r iwldvm
+ 1377  sudo modprobe iwldvm
+ 1378  sudo modprobe -viwldvm
+ 1379  sudo modprobe -v iwldvm
+ 1380  modinfo iwldvm
+ 1381  ls
+ 1382  cd ..
+ 1383  cd Down
+ 1384  ls
+ 1385  cd ..
+ 1386  cd home
+ 1387  ls
+ 1388  cd temp
+ 1389  cd Downloads
+ 1390  cd linux-80211n-csitool
+ 1391  ls
+ 1392  cddrivers 
+ 1393  cd drivers 
+ 1394  ls
+ 1395  cd net
+ 1396  cd wireless
+ 1397  ls
+ 1398  cd ../../..
+ 1399  sudo make -C /lib/modules/$(uname -r)build M=$(pwd)/drivers/net/wireless/iwlwifi INSTALL_MOD_DIR=updates\modules_install
+ 1400  sudo make -C /lib/modules/$(uname -r)/build M=$(pwd)/drivers/net/wireless/iwlwifi INSTALL_MOD_DIR=updates\modules_install
+ 1401  sudo depmod
+ 1402  for file in /lib/firmware/iwlwifi-5000-*.ucode; do sudo mv $file $file.orig; done
+ 1403  sudo ln -s iwlwifi-5000-2.ucode.sigcomm2010 /lib/firmware/iwlwifi-5000-2.ucode
+ 1404  sudo depmod
+ 1405  ifocnfig
+ 1406  ifconfig
+ 1407  iwconfig
+ 1408  dmesg | grep iwl
+ 1409  cd /lib/modules/$(uname -r)/updates/
+ 1410  ls
+ 1411  cd mvm
+ 1412  ls
+ 1413  cp -i iwlmvm.ko ../
+ 1414  sudo cp -i iwlmvm.ko ../
+ 1415  cd ..
+ 1416  ls
+ 1417  sudo depmod
+ 1418  dmesg | grep iwl
+ 1419  echo blacklist iwldvm | sudo tee -a /etc/modprobe.d/csitool.conf
+ 1420  ls
+ 1421  dmesg | grep wifi
+ 1422  ls /lib/firmware/ | grep iwl
+ 1423  dmesg | grep wifi
+ 1424  sudo rm /lib/firmware/iwlwifi-5000-2.ucode
+ 1425  for file for file in /lib/firmware/iwlwifi-5000-*.ucode.orig; do sudo mv ${file} ${file%.orig}; done
+ 1426  for file in /lib/firmware/iwlwifi-5000-*.ucode.orig; do sudo mv ${file} ${file%.orig}; done
+ 1427  sudo depmod
+ 1428  sudo modprobe iwlwifi
+ 1429  sudo start network-manager
+ 1430  dmesg | grep wifi
+ 1431  cd /usr/bash
+ 1432  cd /usr/
+ 1433  ls
+ 1434  cd src
+ 1435  cd linux
+ 1436  ls
+ 1437  cd linux-headers-3.13.0-170-generic/
+ 1438  ls
+ 1439  make menuconfig
+ 1440  dmesg | grep iwlwifi
+ 1441  modinfo iwldvm
+ 1442  modprobe -h
+ 1443  modprobe -a iwldvm
+ 1444  sudo modprobe -a iwldvm
+ 1445  sudo modprobe -c iwldvm
+ 1446  sudo modprobe -c iwldvm | grep mod
+ 1447  sudo modprobe -c iwldvm | grep iwlwifi
+ 1448  sudo apt-get install linux-(uname -r) kernel-package libncurses5-dev fakeroot
+ 1449  sudo apt-get install linux-$(uname -r) kernel-package libncurses5-dev fakeroot
+ 1450  sudo apt-get install linux-$(3.13.0) kernel-package libncurses5-dev fakeroot
+ 1451  sudo apt-get install linux-source-$(3.13.0) kernel-package libncurses5-dev fakeroot
+ 1452  sudo /bin/bash
+ 1453  cd /usr
+ 1454  cd src
+ 1455  ls
+ 1456  cd linux-headers-3.13.0-85-generic/
+ 1457  uname -r
+ 1458  make menuconfig
+ 1459  sudo apt-get install ncurses
+ 1460  sudo apt-get install ncurse
+ 1461  sudo apt-get install ncurses
+ 1462  make menuconfig
+ 1463  sudo make menuconfig
+ 1464  sudo apt-get install ncurses-devel
+ 1465  sudo apt-get install libcurses-dev
+ 1466  sudo apt-get update
+ 1467  sudo apt-get install ncurses-dev
+ 1468  make menuconfig
+ 1469  sudo make menuconfig
+ 1470  cd /usr/src/
+ 1471  ls
+ 1472  cd linux-headers-3.13.0-170-generic/
+ 1473  make menuconfig
+ 1474  sudo make menuconfig
+ 1475  make
+ 1476  make modules_prepare
+ 1477  make modules_install
+ 1478  sudo make modules_install
+ 1479  make clean
+ 1480  sudo make clean
+ 1481  ls
+ 1482  make
+ 1483  dmesg | grep iwl
+ 1484  dmesg | grep dvm
+ 1485  ls /lib/firmware/ | grep iwl
+ 1486  ls /lib/modules/$(uname -r)/updates
+ 1487  uname -r
+ 1488  dmesg | grep iwl
+ 1489  dmesg
+ 1490  dmesg | grep iwl
+ 1491  modprobe iwlwifi
+ 1492  sudo modprobe iwlwifi
+ 1493  dmesg | grep wi
+ 1494  dmesg | grep wif
+ 1495  sudo modprobe iwlwifi
+ 1496  ls
+ 1497  ls /lib/firmware/ | grep iwl
+ 1498  sudo rm /lib/firmware/iwlwifi-5000-2.ucode
+ 1499  for file in /lib/firmware/iwlwifi-5000-*.ucode.orig; do sudo mv ${file} ${file%.orig}; done
+ 1500  ls /lib/modules/$(uname -r)/updates/ | grep iwl
+ 1501  sudo rm -f /lib/modules/$(uname -r)/updates/iwldvm.ko
+ 1502  sudo rm -f /lib/modules/$(uname -r)/updates/iwlmvm.ko
+ 1503  sudo depmod
+ 1504  sudo modprobe iwlwifi
+ 1505  cd /lib/modules/$(uname -r)/build
+ 1506  ls
+ 1507  make
+ 1508  make modules_install
+ 1509  sudo make modules_install
+ 1510  cd updates
+ 1511  cd /home
+ 1512  cd downloads
+ 1513  cd Downloads
+ 1514  ls
+ 1515  cd temp
+ 1516  ls
+ 1517  cd Downloads
+ 1518  ls
+ 1519  cd linux-80211n-csitool
+ 1520  sudo make -C /lib/modules/$(uname -r)/build M=$(pwd)/drivers/net/wireless/iwlwifi INSTALL_MOD_DIR=updates \ modules_install
+ 1521  sudo make -C /lib/modules/$(uname -r)/build M=$(pwd)/drivers/net/wireless/iwlwifi INSTALL_MOD_DIR=updates\modules_install
+ 1522  sudo depmod 
+ 1523  cd ..
+ 1524  for file in /lib/firmware/iwlwifi-5000-*.ucode; do sudo mv $file $file.orig; done
+ 1525  ls /lib/firmware/ | grep iwl
+ 1526  sudo ln -s iwlwifi-5000-2.ucode.sigcomm2010 /lib/firmware/iwlwifi-5000-2.ucode
+ 1527  sudo modprobe iwlwifi
+ 1528  rfkill list all
+ 1529  dmesg | grep iwl
+ 1530  cat /etc/modprobe.d/csitool.conf
+ 1531  sudo rm /etc/modprobe.d/csitool.conf
+ 1532  modinfo iwlwifi
+ 1533  lspci
+ 1534  iwconfig
+ 1535  ifconfig
+ 1536  wifi-menu
+ 1537  ls 
+ 1538  ls /usr/lib/modules/$(uname -r)/kernel/drivers/net
+ 1539  ls /usr/lib/modules/$(uname -r)/kernel/drivers/
+ 1540  ls /usr/lib/modules/$(uname -r)/kernel/
+ 1541  ls /usr/lib/modules/$(uname -r)/
+ 1542  ls /usr/lib/modules/
+ 1543  cd /usr
+ 1544  cd lib
+ 1545  cd modules
+ 1546  sudo apt-get install build-essential checkinstall
+ 1547  modprobe -aa
+ 1548  modprobe -all
+ 1549  modprobe --all
+ 1550  modprobe -a
+ 1551  modprobe -a iwlwifi
+ 1552  cd ..
+ 1553  cd share
+ 1554  ls
+ 1555  cd doc
+ 1556  ls
+ 1557  ls | grep kernel
+ 1558  ls | grep ker
+ 1559  ls | grep k
+ 1560  ls | grep lin
+ 1561  cd linux-image-3.13.0-170-generic/
+ 1562  ls
+ 1563  modinfo iwlwifi
+ 1564  dmesg | grep iwl
+ 1565  dmesg | grep firmware
+ 1566  sudo rm /lib/firmware/iwlwifi-5000-2.ucode
+ 1567  for file in /lib/firmware/iwlwifi-5000-*.ucode.orig; do sudo mv ${file} ${file%.orig}; done
+ 1568  sudo rm -f /lib/modules/$(uname -r)/updates/iwlwifi.ko
+ 1569  sudo rm -f /lib/modules/$(uname -r)/updates/iwldvm.ko
+ 1570  sudo rm -f /lib/modules/$(uname -r)/updates/iwlmvm.ko
+ 1571  sudo depmod
+ 1572  sudo modprobe iwlwifi
+ 1573  ifconfig
+ 1574  dmesg | grep iwl
+ 1575  sudo make -C /lib/modules/$(uname -r)build M=$(pwd)/drivers/net/wireless/iwlwifi INSTALL_MOD_DIR=updates\modules_install
+ 1576  ls
+ 1577  cd Downloads
+ 1578  ls
+ 1579  cd linux-80211n-csitool
+ 1580  sudo make -C /lib/modules/$(uname -r)/build M=$(pwd)/drivers/net/wireless/iwlwifi INSTALL_MOD_DIR=updates\modules_install
+ 1581  ls /lib/modules/$(uname -r)/build/
+ 1582  ls /lib/modules/$(uname -r)/
+ 1583  ls /lib/modules/$(uname -r)/updates/
+ 1584  sudo depmod
+ 1585  ls /lib/modules/$(uname -r)/updates/
+ 1586  ls /lib/firmware/iwlwifi
+ 1587  ls /lib/firmware/ | grep iwlwifi
+ 1588  dmesg | grep iwl
+ 1589  ifconfig
+ 1590  cd  /lib/modules/$(uname -r)/updates
+ 1591  cd  /lib/modules/$(uname -r)/updates/
+ 1592  cd /lib/modules/$(uname -r)/updates/
+ 1593  ls /lib/modules/$(uname -r)/updates/
+ 1594  cd lib
+ 1595  cd /lib
+ 1596  cd modules
+ 1597  ls
+ 1598  uname -r
+ 1599  cd 3.13.0-66-generic
+ 1600  ls
+ 1601  cd ..
+ 1602  cd 3.13.0-170
+ 1603  cd 3.13.0-170-generic/
+ 1604  ls
+ 1605  cd ..
+ 1606  cd 3.13.0-85-generic
+ 1607  ls
+ 1608  dmesg | grep iwl
+ 1609  modinfo iwldvm
+ 1610  /lib/modules/3.13.0-66-generic/kernel/drivers/net/wireless/iwlwifi/dvm/
+ 1611  /lib/modules/3.13.0-170-generic/kernel/drivers/net/wireless/iwlwifi/dvm/
+ 1612  /lib/modules/3.13.0-170-generic/kernel/drivers/net/wireless/
+ 1613  /lib/modules/3.13.0-188-generic/kernel/drivers/net/wireless/
+ 1614  /lib/modules/3.13.0-88-generic/kernel/drivers/net/wireless/
+ 1615  /lib/modules/3.13.0-88-generic
+ 1616  cd ..
+ 1617  ls
+ 1618  cd 3.13.0-85-generic
+ 1619  ls
+ 1620  cd kernel
+ 1621  ls
+ 1622  cd drivers
+ 1623  ls
+ 1624  cd net
+ 1625  ls
+ 1626  modinfo iwldvm
+ 1627  cd iwlwifi
+ 1628  cd wireless
+ 1629  ls
+ 1630  cd iwlwifi
+ 1631  ls
+ 1632  uname -r
+ 1633  ls /lib/modules/3.13.0-66-generic/kernel/drivers/net/wireless/iwlwifi
+ 1634  cd dbm
+ 1635  cd dvm
+ 1636  ls
+ 1637  ls /lib/modules/$(uname -r)/updates
+ 1638  ls /lib/modules/$(3.13.0-85-generic)/updates
+ 1639  ls /lib/modules/3.13.0-85-generic/updates
+ 1640  cd ..
+ 1641  sudo rm updates
+ 1642  sudo rm -f updates
+ 1643  sudo rm -d updates
+ 1644  sudo rm -r updates
+ 1645  modinfo
+ 1646  modinfo iwldvm
+ 1647  cd ..
+ 1648  ls
+ 1649  cd home
+ 1650  cd temp
+ 1651  ls
+ 1652  cd Document
+ 1653  ls
+ 1654  cd Documents
+ 1655  ls
+ 1656  sudo apt-get source linux-source-3.13.0
+ 1657  sudo apt-get source linux-source-3.13.0-170
+ 1658  sudo apt-get source linux-source-3.13.0
+ 1659  dmesg | grep iwl
+ 1660  modinfo iwlwifi
+ 1661  modinfo iwldvm
+ 1662  modprobe iwldvm
+ 1663  dmesg | grep iwl
+ 1664  module
+ 1665  ./configure
+ 1666  cd /lib
+ 1667  ls
+ 1668  cd modules
+ 1669  ls
+ 1670  cd $(uname -r)
+ 1671  ls
+ 1672  make
+ 1673  tree /sys/class/net
+ 1674  dmesg | grep iwlwifi
+ 1675  cd /lib/modules/3.13.0-85-generic/kernel/drivers/net/wireless/iwlwifi
+ 1676  ls
+ 1677  make module_install
+ 1678  uname -r | cut -d . -f 1-2
+ 1679  ls
+ 1680  cd Documents
+ 1681  ls
+ 1682  uname -r
+ 1683  sudo apt-get install build-essential linux-source-3.13.0 linux-headers-generic
+ 1684  sudo apt-get source linux-image-3.13.0-85
+ 1685  sudo apt-get source linux-image-3.13.0
+ 1686  git clone git://kernel.ubuntu.com/ubuntu/linux.git
+ 1687  cd linux
+ 1688  git tag -l Ubuntu
+ 1689  git tag -l Ubuntu-*
+ 1690  cd ..
+ 1691  sudo apt-get intall linux-headers-3.13.0
+ 1692  sudo apt-get install linux-headers-3.13.0
+ 1693  sudo apt-get install linux-headers-3.13.0-170
+ 1694  sudo apt-get install linux-headers-3.13.0-170-generic
+ 1695  grep \"^FIRMWARE_DIR\" /etc/hotplug/firmware.agent
+ 1696  cd lib/modules
+ 1697  cd 3.13.0-85-generic
+ 1698  cd lib
+ 1699  cd /lib
+ 1700  cd modules
+ 1701  cd 3.13.0-85-generic
+ 1702  make
+ 1703  cd build
+ 1704  make
+ 1705  sudo apt update && sudo apt install firmware-iwlwifi
+ 1706  ls
+ 1707  dmesg | iwl
+ 1708  dmesg | grep iwl
+ 1709  cd Downloads
+ 1710  ls
+ 1711  cd linux-80211n-csitool
+ 1712  sudo make -C /lib/modules/$(uname -r)/build M=$(pwd)/drivers/net/wireless/iwlwifi INSTALL_MOD_DIR=updates\modules_install
+ 1713  sudo dep mod
+ 1714  sudo depmod
+ 1715  cd ..
+ 1716  ls /lib/firmware/iwlwifi-5000-*.ucode | grep iwl
+ 1717  for file in /lib/firmware/iwlwifi-5000-*.ucode; do sudo mv $file $file.orig; done
+ 1718  ls /lib/firmware/iwlwifi-5000-*.ucode | grep iwl
+ 1719  ls /lib/firmware/ | grep iwl
+ 1720  sudo ln -s iwlwifi-5000-2.ucode.sigcomm2010 /lib/firmware/iwlwifi-5000-2.ucode
+ 1721  sudo modprobe iwlwifi
+ 1722  dmesg | grep iwlwifi
+ 1723  ifconfig
+ 1724  iwconfig
+ 1725  dmesg | grep iwl
+ 1726  modinfo iwldvm
+ 1727  cd Downloads
+ 1728  ls
+ 1729  cd linux-80211n-csitool-supplementary/
+ 1730  ls
+ 1731  cd injection/
+ 1732  ls
+ 1733  sudo chmod 777 setup_monitor_csi_2.sh
+ 1734  ./setup_monitor_csi_2.sh 64 HT20
+ 1735  sudo modprobe -r iwlwifi
+ 1736  lsmod | grep iwl
+ 1737  sudo modprobe -r mac80211
+ 1738  sudo modprobe -r iwldvm
+ 1739  sudo modprobe -r iwlwifi mac80211 cfg80211
+ 1740  sudo modprobe iwlwifi connector_log=0x1
+ 1741  ./setup_monitor_csi_2.sh 64 HT20
+ 1742  sudo modprobe -r iwlwifi
+ 1743  ./setup_monitor_csi_2.sh 64 HT20
+ 1744  sudo iw wlan1
+ 1745  sudo iw wlan1 info
+ 1746  sudo ../netlink/log_to_file log.dat
+ 1747  iwlist channel
+ 1748  ./setup_monitor_csi_2.sh 56 HT20
+ 1749  sudo ../netlink/log_to_file log.dat
+ 1750  sudo dev wlan1 info
+ 1751  sudo iw dev wlan1 info
+ 1752  ifconfig
+ 1753  iwconfig
+ 1754  lsmod | grep 80211
+ 1755  lsmod | grep iwldvm
+ 1756  iwconfig
+ 1757  ifconfig
+ 1758  sudo ../netlink/log_to_file log.dat
+ 1759  ../netlink/log_to_file log2.dat
+ 1760  sudo ../netlink/log_to_file log2.dat
+ 1761  python read_bf_file.py
+ 1762  sudo ../netlink/log_to_file log2.dat
+ 1763  sudo modprobe -r iwldvm iwlwifi mac80211 cfg80211
+ 1764  sudo modprobe iwlwifi connector_log=0x1
+ 1765  sudo iwconfig wlan1 mode monitor 2>/dev/null 1>/dev/null
+ 1766  sudo ifconfig wlan1 up 2>/dev/null 1>/dev/null
+ 1767  sudo iw wlan1 set channel $chn $bw 
+ 1768  sudo iw wlan1 set channel 56 HT20 
+ 1769  sudo ../netlink/log_to_file log2.dat
+ 1770  ifconfig
+ 1771  iwconfig
+ 1772  sudo iw wlan1 set channel 64 HT20 
+ 1773  iwconfig
+ 1774  sudo ../netlink/log_to_file log2.dat
+ 1775  cd Downloads
+ 1776  ls
+ 1777  cd The-Real-time-Visualization-System-Based-on-CSI/
+ 1778  ls
+ 1779  python read_bf_file.py
+ 1780  conda install matplotlb
+ 1781  conda install matplotlib
+ 1782  python read_bf_file.py
+ 1783  cd ..
+ 1784  ls
+ 1785  sudo apt-get install wireshark
+ 1786  wireshark
+ 1787  sudo wireshark
+ 1788  ./setup_monitor_csi_2.sh 64 HT20
+ 1789  cd Downloads
+ 1790  ls
+ 1791  cd linux-80211n-csitool-supplementary/
+ 1792  cd injection/
+ 1793  ./setup_monitor_csi_2.sh 64 HT20
+ 1794  sudo ../netlink/log_to_file log.dat
+ 1795  ifconfig
+ 1796  dmesg | grep iwl
+ 1797  ls
+ 1798  cd Desktop
+ 1799  ls
+ 1800  ./SecureW2_JoinNow.run 
+ 1801  matlab 
+ 1802  uname -r
+ 1803  ls
+ 1804  cd Downloads
+ 1805  cd matlab_R2014b_glnxa64/
+ 1806  ./install
+ 1807  sudo ./install
+ 1808  cd Downloads
+ 1809  ls
+ 1810  cd linux-80211n-csitool-supplementary/
+ 1811  ls
+ 1812  cd injection/
+ 1813  ls
+ 1814  matlab
+ 1815  ls
+ 1816  cd Downloads
+ 1817  wireshark
+ 1818  sudo wireshark
+ 1819  ipconfig
+ 1820  ifconfig
+ 1821  iwconfig
+ 1822  ip
+ 1823  iw wlan1 info
+ 1824  ip wlan1 info
+ 1825  ip addr show
+ 1826  ls
+ 1827  cd Downloads
+ 1828  ls
+ 1829  cd linux
+ 1830  cd linux-80211n-csitool-supplementary/
+ 1831  cd injection
+ 1832  matlab
+ 1833  ./setup_monitor_csi_2.sh 64 HT20
+ 1834  gcc
+ 1835  ../netlink/log_to_server.c -o log_to_server
+ 1836  ../netlink/log_to_server_1.c -o log_to_server
+ 1837  sudo gcc ../netlink/log_to_server_1.c -o log_to_server
+ 1838  sudo ../netlink/log_to_server 127.0.0.1 8090
+ 1839  ../netlink/log_to_server 127.0.0.1 8090
+ 1840  ../netlink/log_to_server_1 127.0.0.1 8090
+ 1841  sudo gcc ../netlink/log_to_server_1.c -o log_to_server
+ 1842  sudo log_to_server 127.0.0.1 8090
+ 1843  log_to_server 127.0.0.1 8090
+ 1844  sudo ./log_toserver 127.0.0.1 8090
+ 1845  sudo ./log_to_server 127.0.0.1 8090
+ 1846  ls
+ 1847  vim log5.dat 
+ 1848  ./setup_monitor_csi_2.sh 64 HT20
+ 1849  sudo ../netlink/log_to_file test.dat
+ 1850  ls
+ 1851  cd ../netlink/
+ 1852  vim log_to_file.c
+ 1853  gdb
+ 1854  vim
+ 1855  ls
+ 1856  cd Downloads
+ 1857  ls
+ 1858  cd linux-80211n-csitool-supplementary/
+ 1859  ls
+ 1860  cd injection
+ 1861  cd ..
+ 1862  cd livestreamcsi-master/
+ 1863  cd log_to_file/
+ 1864  gcc log_to_file.c -o log
+ 1865  cd ..
+ 1866  cd linux-80211n-csitool-supplementary/
+ 1867  cd netlink
+ 1868  gcc log_to_file_1.c -o realtime_log
+ 1869  sudo ./realtime_log
+ 1870  cd ..
+ 1871  cd injection
+ 1872  ./setup_monitor_csi_2.sh
+ 1873  sudo ../netlink/realtime_log
+ 1874  ifconfig
+ 1875  iwconfig
+ 1876  sudo ../netlink/log_to_file
+ 1877  sudo ../netlink/log_to_file.c
+ 1878  sudo ../netlink/log_to_file log5.dat
+ 1879  sudo ../netlink/realtime_log
+ 1880  sudo ./log_to_server 127.0.0.1 8090
+ 1881  gcc /realtime/log_to_server.c -o log_to_server
+ 1882  gcc ./realtime/log_to_server.c -o log_to_server
+ 1883  gcc ../netlink/log_to_server.c -o log_to_server
+ 1884  gcc ../netlink/log_to_server_1.c -o log_to_server
+ 1885  sudo ./log_to_server 127.0.0.1 8090
+ 1886  iw dev wlan1 link
+ 1887  iw dev wlan1 scan
+ 1888  sudo iw dev wlan1 scan
+ 1889  dmesg | grep -5 -i iwl
+ 1890  iwconfig
+ 1891  ifconfig
+ 1892  uname -a
+ 1893  ./setup_monitor_csi_2.sh 1 HT20
+ 1894  sudo ./log_to_server 127.0.0.1 8090
+ 1895  vim log_to_server.c 
+ 1896  sudo ../netlink/log_to_file 
+ 1897  sudo ../netlink/log_to_file log5.dat
+ 1898  gcc ../netlink/log_to_file.c -o ../netlink/log_to_file
+ 1899  sudo ../netlink/log_to_file log5.dat
+ 1900  ../netlink/log_to_file log5.dat
+ 1901  sudo ../netlink/log_to_file log5.dat
+ 1902  gcc ../netlink/log_to_file.c -o ../netlink/log_to_file
+ 1903  sudo ../netlink/log_to_file log5.dat
+ 1904  gcc ../netlink/log_to_file.c -o ../netlink/log_to_file
+ 1905  sudo ../netlink/log_to_file log5.dat
+ 1906  gcc ../netlink/log_to_file.c -o ../netlink/log_to_file
+ 1907  sudo ../netlink/log_to_file log5.dat
+ 1908  gcc ../netlink/log_to_file.c -o ../netlink/log_to_file
+ 1909  sudo ../netlink/log_to_file log5.dat
+ 1910  gcc ../netlink/log_to_file.c -o ../netlink/log_to_file
+ 1911  sudo ../netlink/log_to_file log5.dat
+ 1912  gcc ../netlink/log_to_file.c -o ../netlink/log_to_file
+ 1913  sudo ../netlink/log_to_file log5.dat
+ 1914  gcc ../netlink/log_to_file.c -o ../netlink/log_to_file
+ 1915  sudo ../netlink/log_to_file log5.dat
+ 1916  gcc ../netlink/log_to_file.c -o ../netlink/log_to_file
+ 1917  sudo ../netlink/log_to_file log5.dat
+ 1918  gcc ../netlink/log_to_file.c -o ../netlink/log_to_file
+ 1919  sudo ../netlink/log_to_file log5.dat
+ 1920  gcc ../netlink/log_to_file.c -o ../netlink/log_to_file
+ 1921  sudo ../netlink/log_to_file log5.dat
+ 1922  gcc ../netlink/log_to_file.c -o ../netlink/log_to_file
+ 1923  sudo ../netlink/log_to_file log5.dat
+ 1924  gcc ../netlink/log_to_file.c -o ../netlink/log_to_file
+ 1925  sudo ../netlink/log_to_file log5.dat
+ 1926  ls
+ 1927  cd ..
+ 1928  ls
+ 1929  gcc -h
+ 1930  cd Downloads
+ 1931  ;s
+ 1932  ls
+ 1933  cd livestreamcsi-master/
+ 1934  ls
+ 1935  cd realtime
+ 1936  matlab realtime_plot.m
+ 1937  matlab
+ 1938  cd ..
+ 1939  ls
+ 1940  Realtime-processing-for-csitool/
+ 1941  ls
+ 1942  cd Realtime-processing-for-csitool/
+ 1943  ls
+ 1944  cd matlab
+ 1945  matlab
+ 1946  sudo wireshark
+ 1947  cd Downloads
+ 1948  cd linux-80211n-csitool-supplementary/
+ 1949  ls
+ 1950  cd netlink
+ 1951  gcc -H log_to_file.c
+ 1952  cd ..
+ 1953  cd injection
+ 1954  gcc ../netlink/log_to_file.c -o ../netlink/log_to_file
+ 1955  sudo ../netlink/log_to_file log5.dat
+ 1956  gcc -H ../netlink/log_to_file.c
+ 1957  gcc ../netlink/log_to_file.c -o ../netlink/log_to_file
+ 1958  sudo ../netlink/log_to_file log5.dat
+ 1959  gcc -H ../netlink/log_to_file.c
+ 1960  cd ..
+ 1961  cd netlink\
+ 1962  cd netlink
+ 1963  make
+ 1964  sudo ./log_to_file log5.dat
+ 1965  iwconfig
+ 1966  ifconfig
+ 1967  cd Downloads
+ 1968  ls
+ 1969  git clone https://github.com/caihao/livestreamcsi
+ 1970  wireshark
+ 1971  sudo wireshark
+ 1972  cd Downloads
+ 1973  sudo apt-get update && sudo apt-get dist-update
+ 1974  cd /sys
+ 1975  ls
+ 1976  gcc -H
+ 1977  gcc -H socket.h
+ 1978  find /sys -name socket
+ 1979  sudo find /sys -name socket
+ 1980  sudo find /home -name socket
+ 1981  sudo find /usr -name socket
+ 1982  sudo find /usr -name sys/socket.h
+ 1983  sudo find /usr -name socket.h
+ 1984  cat /usr/include/linux/socket.h | grep recv
+ 1985  cat /usr/include/linux/socket.h
+ 1986  man socket
+ 1987  gcc -H socket.h
+ 1988  wireshark
+ 1989  sudo wireshark
+ 1990  sudo apt-get update
+ 1991  sudo apt-get update && sudo apt-get dist-upgrade
+ 1992  cd Downloads
+ 1993  ls
+ 1994  sudo ./teamviewer_15.2.2756_amd64.deb
+ 1995  ./teamviewer_15.2.2756_amd64.deb
+ 1996  chmod 777 ./teamviewer_15.2.2756_amd64.deb
+ 1997  ./teamviewer_15.2.2756_amd64.deb
+ 1998  sudo ./teamviewer_15.2.2756_amd64.deb
+ 1999  teamviewer
+ 2000  dmesg | grep iwlwifi
+ 2001  ls /lib/modules/$(uname -r)/build
+ 2002  ls /lib/modules/$(uname -r)/build/updates
+ 2003  cd Downloads
+ 2004  cd linux-80211n-csitool
+ 2005  sudo make -C /lib/modules/$(uname -r)/build M=$(pwd)/drivers/net/wireless/iwlwifi modules
+ 2006  sudo make -C /lib/modules/$(uname -r)/build M=$(pwd)/drivers/net/wireless/iwlwifi INSTALL_MOD_DIR=updates modules_install
+ 2007  sudo depmod
+ 2008  cd ..
+ 2009  cd linux-80211n-csitool-supplementary/
+ 2010  ls
+ 2011  cd injection
+ 2012  ls
+ 2013  ./setup_monitor_csi_2.sh 64 HT20
+ 2014  sudo ../netlink/log_to_file log5.dat
+ 2015  cd ..
+ 2016  cd netlink
+ 2017  gcc log_to_file.c -o log_to_file
+ 2018  sudo ../netlink/log_to_file log5.dat
+ 2019  gcc log_to_file.c -o log_to_file
+ 2020  sudo ../netlink/log_to_file log5.dat
+ 2021  sudo ./log_to_server 127.0.0.1 8090
+ 2022  cd ..
+ 2023  cd injection
+ 2024  ls
+ 2025  sudo ./log_to_server 127.0.0.1 8090
+ 2026  gcc log_to_server.c -o log_to_server
+ 2027  gcc ../netlink/log_to_server.c -o log_to_server
+ 2028  gcc ../netlink/log_to_server_1.c -o log_to_server
+ 2029  history > realtime/hisotory1.txt

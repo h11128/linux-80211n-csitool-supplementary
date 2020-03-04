@@ -1,0 +1,49 @@
+do ../netlink/log_to_data jason_3.dat jason 3 0
+creating jason_3.dat 
+Clean mode: You need to perform gesture swipe up for 10 times! 
+The sequence is 3333333333
+Expected count 35000, expected interval 1000, expected time 70000000us
+Socket set up. Ready to receive packet! 
+Begin recording packet!!! 
+..... ..... ..... ..... ..... 
+The 0th gesture: swipe up 
+Current time in us is 1875940779 
+..... ..... ..... ..... ..... 
+The 1th gesture: swipe up 
+Current time in us is 1878940869 
+..... ..... ..... ..... ..... 
+The 2th gesture: swipe up 
+Current time in us is 1881940950 
+..... ..... ..... ..... ..... 
+The 3th gesture: swipe up 
+Current time in us is 1884941007 
+..... ..... ..... ..... ..... 
+The 4th gesture: swipe up 
+Current time in us is 1887941119 
+..... ..... ..... ..... ..... 
+The 5th gesture: swipe up 
+Current time in us is 1890941180 
+..... ..... ..... ..... ..... 
+The 6th gesture: swipe up 
+Current time in us is 1893941285 
+..... ..... ..... ..... ..... 
+The 7th gesture: swipe up 
+Current time in us is 1896941399 
+..... ..... ..... ..... ..... 
+The 8th gesture: swipe up 
+Current time in us is 1899941480 
+..... ..... ..... ..... ..... 
+The 9th gesture: swipe up 
+Current time in us is 1902941568 
+..... ..... ..... ..... ..... 
+The 10th gesture: swipe left 
+Current time in us is 1905941654 
+..... 
+Broadcast message from root@bo-113c
+	(unknown) at 12:38 ...
+
+The system is going down for halt in 6 minutes!
+MCSS failure timeout shutdown. 
+..... ..... ..... timeout in 5.000001 second
+
+count 34980, expected_count 35000, expected_time 35000000, used_time 35006328, jason_3.dat filesize 7520256 

@@ -1,0 +1,43 @@
+do ../netlink/log_to_data jason_4.dat jason 4 0
+creating jason_4.dat 
+Clean mode: You need to perform gesture circle left for 10 times! 
+The sequence is 4444444444
+Expected count 35000, expected interval 1000, expected time 70000000us
+Socket set up. Ready to receive packet! 
+Begin recording packet!!! 
+..... ..... ..... ..... ..... 
+The 0th gesture: circle left 
+Current time in us is 1978671728 
+..... ..... ..... ..... ..... 
+The 1th gesture: circle left 
+Current time in us is 1981671819 
+..... ..... ..... ..... ..... 
+The 2th gesture: circle left 
+Current time in us is 1984671930 
+..... ..... ..... ..... ..... 
+The 3th gesture: circle left 
+Current time in us is 1987671992 
+..... ..... ..... ..... ..... 
+The 4th gesture: circle left 
+Current time in us is 1990672095 
+..... ..... ..... ..... ..... 
+The 5th gesture: circle left 
+Current time in us is 1993672125 
+..... ..... ..... ..... ..... 
+The 6th gesture: circle left 
+Current time in us is 1996672174 
+..... ..... ..... ..... ..... 
+The 7th gesture: circle left 
+Current time in us is 1999672315 
+..... ..... ..... ..... ..... 
+The 8th gesture: circle left 
+Current time in us is 2002672365 
+..... ..... ..... ..... ..... 
+The 9th gesture: circle left 
+Current time in us is 2005672464 
+..... ..... ..... ..... ..... 
+The 10th gesture: swipe left 
+Current time in us is 2008672599 
+..... ..... ..... ..... timeout in 5.000001 second
+
+count 34980, expected_count 35000, expected_time 35000000, used_time 35007400, jason_4.dat filesize 7520256
