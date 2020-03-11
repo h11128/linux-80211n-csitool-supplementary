@@ -64,7 +64,7 @@ int main(int argc, char** argv)
 	int start_indicator = 0;
 	int now_indicator = 0;
 	char gesture[9][15] = {
-		"swipe left",
+		"swipe left", // swipe right hand from left to right
 		"swipe right",
 		"swipe down",
 		"swipe up",
