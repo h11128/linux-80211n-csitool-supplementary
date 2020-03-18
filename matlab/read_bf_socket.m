@@ -62,7 +62,7 @@ while 1
     index = -1;                     % The index of the plots which need shadowing
     broken_perm = 0;                % Flag marking whether we've encountered a broken CSI yet
     triangle = [1 3 6];             % What perm should sum to for 1,2,3 antennas
-
+    
 %% Process all entries in socket
     % Need 3 bytes -- 2 byte size field and 1 byte code
     while 1
