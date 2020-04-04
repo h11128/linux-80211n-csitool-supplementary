@@ -43,9 +43,13 @@ int main(int argc, char** argv)
 	int ret;
 	unsigned short l, l2;
 	int count = 0;
-	char* name = argv[2];
-	int index_of_gesture = atoi(argv[3]); // require mode 0
-	int mode = atoi(argv[4]);
+	char* name = argv[1];
+	char* filename[50];
+	strcopy(filename, argv[1]);
+	strcopy(filename, "_");
+	strcopy(filename, argv[2]);
+	int index_of_gesture = atoi(argv[2]); // require mode 0
+	int mode = atoi(argv[3]);
 	int expected_count = 0;
 	if (mode == 0){
 		expected_count = 95 * 1000;
@@ -53,7 +57,8 @@ int main(int argc, char** argv)
 	else{
 		expected_count = 95 * 1000;
 	}
-	int expected_time = expected_count * 1000 * 2;
+	int factor = 1;
+	int expected_time = expected_count * 1000 * factor;
 	int expected_interval = 1000;
 
 	struct timespec start, now;
@@ -68,8 +73,8 @@ int main(int argc, char** argv)
 		"swipe right",
 		"swipe down",
 		"swipe up",
-		"push",
-		"pull"
+		"circle left", // circle from left to right
+		"circle right" // circle from right to left
 		"draw circle",
 		"draw zigzag",
 		"double tap",
@@ -85,7 +90,7 @@ int main(int argc, char** argv)
 	
 
 	/* Open and check log file */
-	out = open_file(argv[1], "w");
+	out = open_file(filename, "w");
 	//printf("build socket \n");
 	/* Setup the socket */
 	sock_fd = socket(PF_NETLINK, SOCK_DGRAM, NETLINK_CONNECTOR);
@@ -123,6 +128,8 @@ int main(int argc, char** argv)
 
 	printf("Socket set up. Ready to receive packet! \n");
 	signal(SIGINT, caught_signal);  
+	struct timeval timeout = {5,expected_interval*5};
+	setsockopt(sock_fd, SOL_SOCKET, SO_RCVTIMEO, (char *)&timeout, sizeof(struct timeval));
 	/* Poll socket forever waiting for a message */
 	while (1)
 	{		
@@ -138,11 +145,6 @@ int main(int argc, char** argv)
  		}		
 		/* Receive from socket with infinite timeout */
 		ret = recv(sock_fd, buf, sizeof(buf), 0);
-
-		if (now_indicator == 1){
-			struct timeval timeout = {5,expected_interval*5};
-			setsockopt(sock_fd, SOL_SOCKET, SO_RCVTIMEO, (char *)&timeout, sizeof(struct timeval));
-		}
 
 		if (ret == -1){
 			printf("timeout in 5.000001 second\n");
@@ -174,10 +176,10 @@ int main(int argc, char** argv)
 
 		//if (count % divide == 0){
 			//printf("wrote %d bytes [msgcnt=%u] \n", ret, count);}
-		if (count > divide * 5){
+		//if (count > divide * 5){
 			//printf("round %d \n", count);
-			now_indicator = 1;
-		}
+		//	now_indicator = 1;
+		//}
 		
  		++count;
 		if (ret != l){
@@ -211,12 +213,13 @@ int main(int argc, char** argv)
 	
 	}
 	printf("\n");
+	printf("finished record \n")
 	clock_gettime(CLOCK_MONOTONIC, &now);
 	total_time_used +=  (now.tv_sec - start.tv_sec)*1000000 +  (now.tv_nsec - start.tv_nsec)/1000;	
 	printf("count %d, expected_count %d, ", count, expected_count);
-	printf("expected_time %d, ", expected_time/2); // us
+	printf("expected_time %d, ", expected_time/factor); // us
 	printf("used_time %d, ", total_time_used); // us
-	get_file_size(argv[1]);
+	get_file_size(filename);
 	exit_program(0);
 	return 0;
 }
@@ -225,10 +228,10 @@ void check_usage(int argc, char** argv)
 {
 	if (argc != 5)
 	{	
-		fprintf(stderr, "Usage: %s <output_file> name gesture_index mode\n", argv[0]);
+		fprintf(stderr, "Usage: %s name gesture_index mode\n", argv[0]);
 		exit_program(1);
 	}
-	printf("creating %s \n", argv[1]);
+	printf("creating %s_%s \n", argv[1], argv[2]);
 }
 
 FILE* open_file(char* filename, char* spec)
@@ -286,9 +289,9 @@ void sequence_generator(int *sequence, char gesture[9][15], int index_of_gesture
 
 	if (mode ==0){
 		int i = 0;
-		printf("Clean mode: You need to perform gesture %s for 10 times! \n", gesture[index_of_gesture]);
+		printf("Clean mode: You need to perform gesture %s for 30 times! \n", gesture[index_of_gesture]);
 		printf("The sequence is ");
-		for (i = 0; i<10; ++i){
+		for (i = 0; i<30; ++i){
 			sequence[i] = index_of_gesture;
 			printf("%d", index_of_gesture);
 		}
