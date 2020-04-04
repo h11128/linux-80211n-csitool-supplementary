@@ -48,7 +48,7 @@ int main(int argc, char** argv)
 	int mode = atoi(argv[4]);
 	int expected_count = 0;
 	if (mode == 0){
-		expected_count = 35 * 1000;
+		expected_count = 95 * 1000;
 	}
 	else{
 		expected_count = 95 * 1000;

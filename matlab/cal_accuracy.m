@@ -19,7 +19,7 @@ per_class_accuracy_test = ppp(test_labels, predicted_labels_test);
 figure(2);
 per_class_accuracy_train = ppp(train_labels, predicted_labels_train);
 figure(3);
-plot([1: 9], per_class_accuracy_train(:,3), [1: 9], per_class_accuracy_test(:,3));
+plot([0: 9], per_class_accuracy_train(:,3), [0: 9], per_class_accuracy_test(:,3));
 p(1).LineWidth = 35;
 p(2).LineWidth = 35;
 p(1).Marker = '.';

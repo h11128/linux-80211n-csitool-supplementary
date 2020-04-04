@@ -1,6 +1,6 @@
 function sequence=wifi_butterworth_function(sequence, mode)
     if nargin ==1
-        mode = 0
+        mode = 0;
     end
     sequence = sequence';
     fs=1000;%²ÉÑùÆµÂÊ

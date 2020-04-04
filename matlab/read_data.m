@@ -13,8 +13,8 @@ function result_matrix = read_data(gesture_index, filename, packet_number)
     scale_csi1 = db(abs(squeeze(csi_sample1).'));
 
 
-    figure(1)
-    myplot(scale_csi1, 'Subcarrier index', 'SNR [dB]', 'First Packet Plot', [0 30], 0);
+    %figure(1)
+    %myplot(scale_csi1, 'Subcarrier index', 'SNR [dB]', 'First Packet Plot', [0 30], 0);
 
     csi_matrix = zeros(packet_number,30,3); % all csi_matrix
     sub_matrix = cell(30); % for plot
@@ -98,7 +98,7 @@ function result_matrix = read_data(gesture_index, filename, packet_number)
 
     %title(['Sum Amplitude of Gesture ' num2str(gesture_index) ' (selected antenna filter after sum) ']);
     
-    cutdata1(cut_matrix, row_matrix, gesture_index, 1500, 250, 10);
+    cutdata(cut_matrix, row_matrix, gesture_index, 1500, 250, 10);
     
     
 end
@@ -201,7 +201,7 @@ function [row_matrix, cut_matrix] = filter_before_sum(row_matrix, cut_matrix)
     for i = 1:sizes(2)
         amplitude = row_matrix(:,i);
         [amplitude_hampel,~] = hampel(amplitude);
-        row_matrix(:,i) = wifi_butterworth_function(amplitude_hampel', 0);
+        row_matrix(:,i) = wifi_butterworth_function(amplitude_hampel', 1);
     end
     for i = 1:3
         cut_matrix(:,i) = sum(row_matrix(:,(i-1)*30+1:i*30), 2)/30;
@@ -217,22 +217,3 @@ function out_matrix = filter_after_sum( out_matrix)
     end
 end
 
-function myplot(matrix, x_label, y_label, title_string, ylimit, islegend )
-    plot(matrix); 
-    xlabel(x_label);
-    ylabel(y_label);
-
-
-    if nargin >3
-        title(title_string);
-    end
-    if nargin > 4    
-        ylim(ylimit);
-    end
-    if nargin>5
-        if islegend == 1
-            legend('RX Antenna A', 'RX Antenna B', 'RX Antenna C', 'Location', 'SouthEast' );
-        end
-    end
-            
-end

@@ -17,9 +17,9 @@ function reco_bf_socket()
 while 1
 %% Build a TCP Server and wait for connection
     port = 8090;
-    t = tcpip('0.0.0.0', port, 'NetworkRole', 'server');
-    t.InputBufferSize = 1024;
-    t.Timeout = 15;
+    t = tcpip('127.0.0.1', port, 'NetworkRole', 'server');
+    t.InputBufferSize = 2146304;
+    t.Timeout = 60;
     fprintf('Waiting for connection on port %d\n',port);
     fopen(t);
     fprintf('Accept connection from %s\n',t.RemoteHost);
@@ -66,6 +66,7 @@ while 1
     csi_entry = [];
     index = -1;                     % The index of the plots which need shadowing
     count = 0;                       % Packet count
+    buffer_count = 0;
     broken_perm = 0;                % Flag marking whether we've encountered a broken CSI yet
     triangle = [1 3 6];             % What perm should sum to for 1,2,3 antennas
     gestures  = [
@@ -79,15 +80,17 @@ while 1
 		"circle right"
 		"double tap"
 	];
-    row_matrix = zeros(packet_number,90); % matrix that each row is the csi data of a packet
+    window_size = 1500;
+    shift = 250;
     value_per_feature = 90;
+    buffer_matrix = zeros(window_size ,value_per_feature);
     feature_number = 8;
     total_feature = feature_number * value_per_feature;
     features = zeros(1, total_feature);
     random_label = zeros(1, 1);
-    random_label(1,1) = 9;
-    model = load("model.mat");
-    model = model.model;
+    load("model.mat");
+    buffer_matrix = zeros(window_size ,value_per_feature));
+    
 %% Get CSI entry From Socket
     % Need 3 bytes -- 2 byte size field and 1 byte code
     while 1
@@ -142,23 +145,25 @@ while 1
         csi = get_scaled_csi(csi_entry);%CSI data
         scale_csi = db(abs(squeeze(csi_sample).'));
         count = count + 1;
-        row_matrix(count, :) = scale_csi(:);
-        if count <= 3000
-            printf("not enough packet to predict");
-        elseif rem(count, 250) == 0
-            X = row_matrix(count-3000 : count, :);
-            features = get_feature(features, X, 1);
-            [predicted_label] = svmpredict(random_label, features, model);
-            fprintf(gesture(predicted_label));
+        buffer_count = buffer_count + 1;
+        buffer_matrix(buffer_count, :) = scale_csi(:);
+        if buffer_count == window_size
+            features = get_feature(features, buffer_matrix, 1);
+            [labels, ~, ~] = svmpredict(random_label, features, model);
+            fprintf('The predict gesture is %d, window %d to %d \n', labels, count - window_size, count);   
+            buffer_matrix(1:window_size - shift, :) = buffer_matrix(shift+1: window_size, :);
+            buffer_count = buffer_count - shift;
         end
         
+        %{
         if initial_time == 0
             initial_time = csi_entry.timestamp_low;
         end
         current_time = csi_entry.timestamp_low - initial_time;
         %disp(packet_count);
         %disp(csi_entry.rssi_a);
-        %%rssi = [csi_entry.rssi_a, csi_entry.rssi_b, csi_entry.rssi_c];
+        %rssi = [csi_entry.rssi_a, csi_entry.rssi_b, csi_entry.rssi_c];
+        %}
 	%You can use the CSI data here.
 
 	%This plot will show graphics about recent 10 csi packets
@@ -169,25 +174,10 @@ while 1
         if Nrx > 2
             set(p(index*3 + 3),'XData', (1:30), 'YData', db(abs(squeeze(csi(1,3,:)).')), 'color', 'r', 'linestyle', '-');
         end
-        
-        %{
-        t2 = [t2 current_time];
-        m2 = [m2 csi_entry.rssi_a];
-        m2_2 = [m2_2 csi_entry.rssi_b];
-        m2_3 = [m2_3 csi_entry.rssi_c];
-        set(p1(1),'XData', t2, 'YData', m2, 'color', 'b', 'linestyle', '-');
-        if Nrx > 1
-            set(p1(2),'XData', t2, 'YData', m2_2, 'color', 'g', 'linestyle', '-');
-        end
-        if Nrx > 2
-            set(p1(3),'XData', t2, 'YData', m2_3, 'color', 'r', 'linestyle', '-');
-         
-        end
-        axis([current_time-1000000, current_time+500000,20,50]);
-        %}
+
         drawnow;
         
-        pause(0.0025);
+        pause(sampling_rate/10000000);
         csi_entry = [];
     end
 %% Close file
